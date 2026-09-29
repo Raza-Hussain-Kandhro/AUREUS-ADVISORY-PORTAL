@@ -24,23 +24,25 @@ export async function connectDB() {
     return null;
   }
 
+  mongoose.set('strictQuery', true);
+  mongoose.set('bufferCommands', false);
+
+  const connectPromise = mongoose.connect(uri, {
+    serverSelectionTimeoutMS: 5000,
+    connectTimeoutMS: 5000,
+    socketTimeoutMS: 5000,
+    family: 4,
+  });
+
   try {
-    mongoose.set('strictQuery', true);
-    const conn = await withTimeout(
-      mongoose.connect(uri, {
-        serverSelectionTimeoutMS: 5000,
-        connectTimeoutMS: 5000,
-        socketTimeoutMS: 5000,
-      }),
-      8000,
-      'MongoDB connection'
-    );
+    const conn = await withTimeout(connectPromise, 8000, 'MongoDB connection');
     usingMockData = false;
     console.info(`[Aureus API] MongoDB connected: ${conn.connection.host}`);
     return conn;
   } catch (err) {
     usingMockData = true;
     console.error('[Aureus API] MongoDB connection failed, falling back to mock data:', err.message);
+    mongoose.disconnect().catch(() => {});
     return null;
   }
 }
