@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/favicon.svg" width="92" alt="Aureus Logo">
+<img src="public/logo.png" width="92" alt="Aureus Logo">
 
 # AUREUS ADVISORY PORTAL
 
