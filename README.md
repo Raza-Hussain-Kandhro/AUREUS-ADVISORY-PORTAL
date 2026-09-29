@@ -144,7 +144,7 @@ Written summary
 
 ### 01 — Install
 
-````bash
+```bash
 npm install
 
 02 — API
@@ -317,5 +317,6 @@ Full-Stack Web Developer Intern @SafeXSolutions
 
 Private wealth · Protected access · Intelligent infrastructure
 
-</div> ```
-````
+</div>
+
+```
