@@ -101,7 +101,7 @@ Written summary
 <img src="https://cdn.simpleicons.org/vite/C6A15B" width="34" title="Vite">
 <img src="https://cdn.simpleicons.org/tailwindcss/C6A15B" width="34" title="Tailwind CSS">
 <img src="https://cdn.simpleicons.org/framer/C6A15B" width="34" title="Framer Motion">
-<img src="https://cdn.simpleicons.org/recharts/C6A15B" width="34" title="Recharts">
+<img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/chart-line.svg" width="34" title="Recharts">
 </p>
 
 - **React 18 + Vite + React Router, Tailwind CSS, Framer Motion, Recharts,
