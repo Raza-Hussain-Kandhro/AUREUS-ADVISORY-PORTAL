@@ -1,0 +1,99 @@
+/* Tailwind directives are processed by PostCSS. */
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-obsidian-border;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  body {
+    @apply bg-obsidian-deep text-platinum font-body antialiased;
+    background: radial-gradient(120% 120% at 50% -10%, #131a2b 0%, #0b0f19 45%, #050505 100%)
+      fixed;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-platinum;
+    letter-spacing: -0.01em;
+  }
+
+  /* Tabular numerals everywhere money appears, so digits don't jitter on roll */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.35);
+    color: #f3f4f6;
+  }
+
+  /* Visible, on-brand keyboard focus */
+  :focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-glass rounded-2xl;
+  }
+
+  .glass-panel-hover {
+    @apply transition-colors duration-500 ease-vault hover:bg-white/[0.05] hover:border-white/[0.16];
+  }
+
+  /* Vault Mode: slow, deliberate desaturation of the whole shell when offline */
+  .vault-mode {
+    filter: saturate(0.55) brightness(0.96);
+    transition: filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .vault-mode-off {
+    filter: saturate(1) brightness(1);
+    transition: filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .shimmer-surface {
+    background-size: 200% 100%;
+    @apply bg-gold-shimmer animate-shimmer;
+  }
+}
