@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const team = [
   { name: 'Raza Hussain', role: 'Senior Wealth Advisor', initials: 'RH' },
   { name: 'Ateeq', role: 'Head of Private Markets', initials: 'AO' },
-  { name: 'Qadeer', role: 'Director of Planning', initials: 'LM' },
+  { name: 'Qadeer', role: 'Director of Planning', initials: 'QR' },
 ];
 
 export default function PublicAbout() {
