@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const team = [
-  { name: 'Priya Anand', role: 'Senior Wealth Advisor', initials: 'PA' },
-  { name: 'David Okafor', role: 'Head of Private Markets', initials: 'DO' },
-  { name: 'Lena Marchetti', role: 'Director of Planning', initials: 'LM' },
+  { name: 'Raza Hussain', role: 'Senior Wealth Advisor', initials: 'RH' },
+  { name: 'Ateeq', role: 'Head of Private Markets', initials: 'AO' },
+  { name: 'Qadeer', role: 'Director of Planning', initials: 'LM' },
 ];
 
 export default function PublicAbout() {
