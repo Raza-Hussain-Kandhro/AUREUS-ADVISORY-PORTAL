@@ -176,7 +176,7 @@ Open `http://localhost:5173`. You'll land on the public marketing site; click **
 | ----------- | --------------------------- | ------------------------------------------------------------------------------ |
 | **Client**  | `amara@aureuscapital.demo`  | Amara Reyes's portfolio ($12.45M)                                              |
 | **Client**  | `marcus@aureuscapital.demo` | Marcus Chen's portfolio ($6.875M) — a different client, proving data isolation |
-| **Advisor** | `priya@aureuscapital.demo`  | Client roster for both clients above, read-only detail view                    |
+| **Advisor** | `raza@aureuscapital.demo`  | Client roster for both clients above, read-only detail view                    |
 
 The login page also has one-click buttons that fill these in for you.
 
